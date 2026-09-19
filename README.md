@@ -1,5 +1,4 @@
-# sql-migration-lint
-
+# postgres-migration-safety-lint
 A static analyser for SQL migration files. Point it at a `.sql` file (or a
 directory of them) and it reports the operations that are dangerous to run
 against a live PostgreSQL database, why they are dangerous, and what to write
