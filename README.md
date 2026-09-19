@@ -705,4 +705,21 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+<!-- RELATED:START -->
+
+## Related tools
+
+- **[pg-perf-check](https://github.com/duke5am/pg-perf-check)** — PostgreSQL performance diagnostics: 24 read-only checks and 7 SQL files for bloat, missing indexes, slow queries, locks and autovacuum.
+  *(if you were searching for "postgres performance tuning queries")*
+- **[pg-restore-drill](https://github.com/duke5am/pg-restore-drill)** — Prove your PostgreSQL backup actually restores: a scripted point-in-time recovery drill with a measured RPO/RTO report and a negative control.
+  *(if you were searching for "test postgres backup restore")*
+- **[rls-policy-tester](https://github.com/duke5am/rls-policy-tester)** — Prove user A cannot read user B's rows in Postgres or Supabase with row level security, including negative controls that fail on a missing policy.
+  *(if you were searching for "supabase rls test")*
+
+All 28 tools in this set, grouped by what they check: **[dev-tools-index](https://duke5am.github.io/dev-tools-index/)**
+
+If you arrived here searching for one of these, this is the tool: **postgres migration lock** · **alter table blocking migration** · **create index concurrently** · **safe database migration checker**
+
+<!-- RELATED:END -->
+
 → **[SQL Migration Safety Pack](https://duke5am.gumroad.com/l/10-sql-migration-pack)** — $24 on Gumroad <!-- GUMROAD-LINK -->
