@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postgres-migration-safety-lint"
+version = "0.1.0"
+description = "Static analyser for dangerous PostgreSQL migration steps: table rewrites, blocking locks and unsafe DDL, with no database connection."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "duke5am" }]
+keywords = [
+  "postgres", "postgresql", "migration", "sql", "linter", "static-analysis",
+  "database", "schema-change", "zero-downtime",
+]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Topic :: Database",
+  "Topic :: Software Development :: Quality Assurance",
+]
+# Standard library only, and deliberately so: the tool never connects to a
+# database, so there is no psycopg2/psycopg dependency and never will be.
+dependencies = []
+
+[project.scripts]
+postgres-migration-safety-lint = "sqlmig.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/duke5am/postgres-migration-safety-lint"
+Issues = "https://github.com/duke5am/postgres-migration-safety-lint/issues"
+
+[tool.setuptools]
+packages = ["sqlmig"]
+include-package-data = true

@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include tests *.py *.sql
+recursive-include examples *.sql *.md

@@ -1,11 +1,14 @@
 # postgres-migration-safety-lint
+
+[![PyPI](https://img.shields.io/pypi/v/postgres-migration-safety-lint)](https://pypi.org/project/postgres-migration-safety-lint/)
+
 A static analyser for SQL migration files. Point it at a `.sql` file (or a
 directory of them) and it reports the operations that are dangerous to run
 against a live PostgreSQL database, why they are dangerous, and what to write
 instead.
 
-It needs **no database connection**, makes **no network calls**, and installs
-**nothing**: one Python 3 file plus a small package, standard library only.
+It needs **no database connection**, makes **no network calls**, and has **no
+dependencies**: one Python 3 file plus a small package, standard library only.
 
 ```console
 $ python3 sql_migration_lint.py examples/0007_add_email.sql
@@ -83,15 +86,20 @@ it can prove.
 
 ## Install
 
-Copy the directory and run it. There is nothing to install.
+```console
+pip install postgres-migration-safety-lint          # from PyPI
+postgres-migration-safety-lint migrations/0007_add_email.sql
+```
+
+Or clone and run it — same code, nothing to install:
 
 ```console
-git clone <this repository>
-cd sql-migration-lint
+git clone https://github.com/duke5am/postgres-migration-safety-lint
+cd postgres-migration-safety-lint
 python3 sql_migration_lint.py --help
 ```
 
-Requires Python 3.8 or newer (developed and tested on CPython 3.13). No third
+Requires Python 3.9 or newer (developed and tested on CPython 3.13). No third
 party packages, no database driver, no network access.
 
 ## Usage
